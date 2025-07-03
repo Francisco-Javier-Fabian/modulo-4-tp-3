@@ -1,46 +1,26 @@
-import { createContext, useState, useEffect } from "react";
+//  Maneja el estado global del carrito
 
-export const CartContext = createContext();
+import { createContext, useContext } from "react";
+import useCart from "../hooks/useCart"
 
+//  1. Crear el contexto (createContext)
+const CartContext = createContext();
+
+//  2. Crear el provider
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState(() => {
-    return JSON.parse(localStorage.getItem("cart")) || [];
-  });
-
-  useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart]);
-
-  const addToCart = (product) => {
-    setCart((prevCart) => {
-      const existingProduct = prevCart.find((item) => item.id === product.id);
-      if (existingProduct) {
-        return prevCart.map((item) =>
-          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-        );
-      } else {
-        return [...prevCart, { ...product, quantity: 1 }];
-      }
-    });
-  };
-
-  const removeFromCart = (id) => {
-    setCart((prevCart) => prevCart.filter((product) => product.id !== id));
-  };
-
-  const updateQuantity = (id, quantity) => {
-    setCart((prevCart) =>
-      prevCart.map((product) =>
-        product.id === id ? { ...product, quantity: Math.max(1, quantity) } : product
-      )
-    );
-  };
-
-  const totalPrice = cart.reduce((total, product) => total + product.price * product.quantity, 0);
+  
+  // Crea instancia del custom hook useCart
+  const cart = useCart();
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity, totalPrice }}>
+    <CartContext.Provider value={cart}>
       {children}
     </CartContext.Provider>
-  );
-};
+  )
+}
+//  2.1 Usar el provider en el main.jsx
+
+//  3. Crear un custom hook para consumir el contexto (useContext)
+export const useCartContext = () => {
+  return useContext(CartContext)
+}

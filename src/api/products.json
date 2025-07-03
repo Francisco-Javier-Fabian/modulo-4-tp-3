@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "La Historia del tiempo",
+    "price": 1000,
+    "img": "historia-del-tiempo"
+  },
+  {
+    "id": 2,
+    "name": "Cosmos de Karl Sagan",
+    "price": 200,
+    "img": "cosmos"
+  },
+  {
+    "id": 3,
+    "name": "La Republica",
+    "price": 50,
+    "img": "la-republica"
+  },
+  {
+    "id": 4,
+    "name": "El estudio escarlata",
+    "price": 150,
+    "img": "estudio-en-escarlata"
+  },
+  {
+    "id": 5,
+    "name": "El escarabajo de oro",
+    "price": 1000,
+    "img": "el-escarabajo-de-oro"
+  },
+  {
+    "id": 6,
+    "name": "Comentarios al Naucrato",
+    "price": 200,
+    "img": "naucrato"
+  },
+  {
+    "id": 7,
+    "name": "Las intermitencias de la muerte",
+    "price": 50,
+    "img": "muerte"
+  },
+  {
+    "id": 8,
+    "name": "Evangelio Segun Jesucristo",
+    "price": 150,
+    "img": "jesus"
+  },
+  {
+    "id": 9,
+    "name": "Sueñan los andriodes con ovejas electricas",
+    "price": 1000,
+    "img": "suenan"
+  },
+  {
+    "id": 10,
+    "name": "Cartas marcadas - Alejandro Dolina",
+    "price": 200,
+    "img": "cartas"
+  },
+  {
+    "id": 11,
+    "name": "La venas abiertas de America Latina",
+    "price": 50,
+    "img": "america"
+  },
+  {
+    "id": 12,
+    "name": "El imperio final - Brandon Sanderson",
+    "price": 150,
+    "img": "imperio"
+  }
+]

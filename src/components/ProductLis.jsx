@@ -1,47 +1,23 @@
-import MovieCardWatchlist from "./MovieCardWatchlist"
-import EmptyWatchlist from "./EmptyWatchlist"
+//  Productos disponibles en inicio
 
-const WatchlistModal = ({ isModalOpen, setIsModalOpen, watchlist, handleRemoveMovie, handleRemoveAll }) => {
+import products from "../api/products.json"
+import ProductCard from "./ProductCard"
 
-	const handleCloseModal = () => setIsModalOpen(false)
+const ProductList = () => {
 
-	return (
-		<>
-			{
-				isModalOpen && <div className="fixed inset-0 bg-black/90 flex items-center justify-center p-5">
-					<div className='bg-gray-900 rounded-xl shadow-lg px-6 py-4 w-11/12 max-w-md relative max-h-full overflow-y-auto'>
-						<div className="w-full text-right mb-4">
-
-							<button
-								onClick={handleCloseModal}
-								className="text-slate-300 hover:text-slate-50 transform hover:scale-110 duration-300"
-							>
-								<i class="bi bi-x-octagon text-2xl font-medium"></i>
-							</button>
-							<button onClick={handleRemoveAll} className="text-slate-300 hover:text-slate-50 font-medium">borrar todo</button>
-							
-							
-						</div>
-						{
-							watchlist.length > 0 ? (
-								<ul>
-									{watchlist.map((movie) => (
-										<MovieCardWatchlist
-											key={movie.id}
-											movie={movie}
-											onRemove={handleRemoveMovie}
-										/>
-									))}
-								</ul>
-							) : (
-								<EmptyWatchlist />
-							)
-						}
-					</div>
-				</div>
-			}
-		</>
-	)
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 xl:gap-8 py-4 px-5 xl:py-10 xl:px-24">
+      {
+        products.map((product) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+          />
+        ))
+      }
+      
+    </div>
+  )
 }
 
-export default WatchlistModal
+export default ProductList

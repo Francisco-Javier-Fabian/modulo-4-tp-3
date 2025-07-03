@@ -1,4 +1,5 @@
-# Proyecto Nuevo - Sprint 3 🧠 Con la Patronzita
+# Proyecto Nuevo - Sprint 3 🧠 
+
 
 ## 🚀 Tecnologías utilizadas
 
