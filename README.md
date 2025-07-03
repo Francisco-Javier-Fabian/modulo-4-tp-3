@@ -1,4 +1,4 @@
-# 🧠 Proyecto Nuevo - Sprint 3  
+# 🌐 Proyecto realizado - Sprint 3
 
 ## 🚀 Tecnologías utilizadas
 
@@ -43,3 +43,5 @@
 │   ├── main.jsx    #  Renderiza la aplicación
 │   └── index.css
 
+
+# 🧠 Autor: Francisco Javier Fabian
