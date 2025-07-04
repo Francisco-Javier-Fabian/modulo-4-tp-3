@@ -16,7 +16,7 @@ const CartSidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
       {
         /*  Renzeriza el Modal si isModalOpen es true  */
         isSidebarOpen && <div className="fixed inset-0 bg-black/90 flex justify-end">
-          <div className='bg-[#f2e7b3] dark:bg-slate-950 rounded-xl shadow-lg w-lg relative max-h-full overflow-y-auto'>
+          <div className='bg-[#f2e7b3] dark:bg-slate-950  rounded-xl shadow-lg w-lg relative max-h-full overflow-y-auto grid grid-rows-[auto_1fr_auto]'>
             <div className="bg-[#8f542b]  dark:bg-slate-950 w-full text-right mb-4 px-6 py-4 sticky top-0 shadow-lg shadow-current">
               {/*  Btn para cerrar el modal  */}
               <button
@@ -47,10 +47,14 @@ const CartSidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
                 <EmptyCart />
               )
             }
-            <div className="flex sticky bottom-0 justify-between text-slate-200 font-semibold py-2 px-5 bg-teal-700 dark:bg-fuchsia-950 mt-4">
+            <div className="flex sticky bottom-0 justify-between text-slate-200 font-semibold py-2 px-5 shadow-inner shadow-[#664bce] bg-[#8f542b] dark:bg-fuchsia-950 mt-4">
               <p>Precio Total: </p>
-              <p> $ {totalPrice} </p>
+              <p> $ {totalPrice}</p>
+              {console.log(totalPrice)}
+
             </div>
+
+
 
           </div>
         </div>

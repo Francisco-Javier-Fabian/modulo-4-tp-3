@@ -4,9 +4,12 @@ const Header = ({ setIsSidebarOpen }) => {
 
   const handleOpenSidebar = () => setIsSidebarOpen(true)
 
+/*  Identificar que dispositivo está usando el usuario  */
+  const isMobileDevice = /Mobi|Android/i.test(navigator.userAgent);
+  
   return (
     <header className="
-      text-white p-4 flex justify-between
+      text-white p-4 flex justify-between sticky top-0 shadow-sm shadow-slate-800 dark:shadow-slate-500
       bg-[#8f542b] 
       dark:bg-slate-900
     ">
@@ -16,11 +19,14 @@ const Header = ({ setIsSidebarOpen }) => {
 
       {/*  Btn para ver el modal de "Carrito"  */}
       <button
-        onDoubleClick={handleOpenSidebar}
+        /*  Si es Celular o Tablet - un click  */
+        onClick={isMobileDevice ? handleOpenSidebar : undefined}
+        /*  Si es Computadora - doble click  */
+        onDoubleClick={!isMobileDevice ? handleOpenSidebar : undefined}
         className="
         text-black py-2 px-4 rounded
           hover:shadow-sm transform hover:scale-105 duration-300 
-          bg-yellow-200 hover:bg-yellow-500 hover:shadow-[#B4CF66]
+          bg-amber-200/90 hover:bg-amber-300/80 hover:shadow-[#B4CF66]
           dark:bg-teal-800 dark:hover:bg-teal-600 dark:hover:shadow-[#6457D5] dark:text-white
         ">
         <i className="bi bi-cart2 md:text-lg font-medium flex gap-2 items-center justify-center"></i>

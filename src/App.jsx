@@ -24,10 +24,12 @@ function App() {
         <CartSidebar
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}
-        />
-
+        /> 
+        
+        <Footer />
       </div>
     </CartProvider>
+
   )
 }
 

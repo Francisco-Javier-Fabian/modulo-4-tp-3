@@ -55,7 +55,7 @@
   },
   {
     "id": 10,
-    "name": "Cartas marcadas - Alejandro Dolina",
+    "name": "Cartas marcadas",
     "price": 200,
     "img": "cartas"
   },
@@ -67,7 +67,7 @@
   },
   {
     "id": 12,
-    "name": "El imperio final - Brandon Sanderson",
+    "name": "El imperio final",
     "price": 150,
     "img": "imperio"
   }

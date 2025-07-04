@@ -6,7 +6,7 @@
 - ⚡ **Vite** — Herramienta de desarrollo rápida para proyectos modernos.
 - 🎨 **TailwindCSS** — Framework de estilos utilitario.
 - 🎵 **Bootstrap Icons** — Íconos vectoriales listos para usar.
-- 🧹 **ESLint** — Linter para mantener código limpio y coherente.
+
 
 ## 🧩 Funcionalidades del Proyecto
 - Muestra un listado de libros en la pantalla principal.
@@ -17,7 +17,6 @@
 - Mantiene el listado de libros guardadas aunque se recargue o se cierre la página.
 
 ## 📁 Estructura de Carpetas
-
 
 
 # 🧠 Autor: Francisco Javier Fabian
